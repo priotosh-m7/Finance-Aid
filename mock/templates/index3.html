@@ -1,0 +1,317 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stylesheet1.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Quintessential&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" type="image/png" href="{% static 'output-onlinepngtools.png' %}">
+    <title>Salary Calculator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark" style="background-color: rgb(25, 44, 65); ">
+  <div class="container-fluid">
+    <a class="navbar-brand"  href="#">Finance Aid</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+         <a class="nav-link active" aria-current="page" href="/homepage">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/SalaryCalculator">In-hand Salary Calculator</a></li>
+            <li><a class="dropdown-item" href="/homeloan">Home Loan EMI calculator</a></li>
+              <li><a class="dropdown-item" href="/eduloan">Education Loan EMI calculator</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2 bg-light" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" style="background-color: azure; color: blue;" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    <div class="breadcrumb">
+<nav style="--bs-breadcrumb-divider: '>'; "   aria-label="breadcrumb">
+  <ol class="breadcrumb light-blue" >
+    <li class="breadcrumb-item" ><a href="/homepage">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="/homeloanindex">Salary Calculator</a></li>
+  </ol>
+</nav>
+</div>
+<main1>
+
+    
+
+    <form class="row g-3" style="background-color: rgba(61, 99, 143, 0.637);
+
+    align-self: center;
+    height: 80%;
+    padding: 20px;" action="SalaryDetails\">
+        <h3>CTC Details</h3>
+        <br>
+        <div class="col-md-6" style="width: 40%" >
+          <label for="inputCTC" class="form-label">Cost to Company(CTC)</label>
+          <input type="number" class="form-control"  id="inputCTC" name="inputctc" value="800000" min="300000">
+        </div>
+          <div class="Bonus-type" style="width: 20%">
+          <label for="Bonustype" class="form-label">Type of Bonus</label>
+          <select id="Bonustype" class="form-select" name="bonustype">
+            <option selected>Choose...</option>
+            <option value="percent">Percentage</option>
+              <option value="amt">Amount</option>
+          </select>
+        </div>
+        <div class="col-md-6" style="width: 40%">
+          <label for="inputBonus" class="form-label">Bonus</label>
+          <input type="number" class="form-control" id="inputBonus" name="bonus" value="0" min="0">
+        </div>
+
+
+          <div class="Experience" style="width: 33%">
+          <label for="inputexp" class="form-label">Experience(years)</label>
+           <input type="number" class="form-control" id="inputexp" name="exp" value="0" min="0">
+
+        </div>
+        <div class="Location" style="width: 33%">
+          <label for="inputloc" class="form-label">Location</label>
+
+            <select id="inputloc" class="form-select" name="loc">
+            <option selected>Choose...</option>
+            <option value="metro">Metro</option>
+              <option value="nonmetro">Non-Metro</option>
+          </select>
+        </div>
+
+        <br>
+        <h3>Monthly Deductions</h3>
+        <div class="Professional-tax" style="width:33%">
+          <label for="inputproftax" class="form-label">Professional Tax</label>
+          <input type="number" class="form-control" id="inputproftax" name="pftax"  value="200">
+        </div>
+        <div class="EPF" style="width:33%">
+          <label for="inputepf" class="form-label">Employer PF</label>
+          <input type="number" class="form-control" id="inputepf" name="epf"  value="1800">
+        </div>
+        <div class="EmployeeInsurance" style="width:33%">
+          <label for="inputeinsurance" class="form-label">Employer Insurance</label>
+          <input type="number" class="form-control" id="inputeinsurance" name="einsurance"  value="250">
+        </div>
+        <br>
+        <h3>Additional Deductions</h3>
+        <br>
+         <div class="AddDeduction1" style="width:33%">
+          <label for="inputAdd1" class="form-label">Additional Deduction 1</label>
+          <input type="number" class="form-control" id="inputAdd1" name="Add1"  value="0">
+             <select id="period" style="width:50%; " class="form-select" name="add1dur">
+            <option selected value="monthly">Monthly</option>
+            <option value="annual">Yearly</option>
+
+          </select>
+        </div>
+        <div class="AddDeduction2" style="width:33%">
+          <label for="inputAdd2" class="form-label">Additional Deduction 2</label>
+          <input type="number" class="form-control" id="inputAdd2" name="Add2"  value="0">
+                         <select id="add2period" style="width:50%" class="form-select" name="add2dur">
+            <option selected value="monthly">Monthly</option>
+            <option value="annual">Yearly</option>
+
+          </select>
+        </div>
+        <div class="AddDeduction3" style="width:33%">
+          <label for="inputAdd3" class="form-label">Additional Deduction 3</label>
+          <input type="number" class="form-control" id="inputAdd3" name="Add3"  value="0">
+                         <select id="add3period" style="width:50%" class="form-select" name="add3dur">
+            <option selected value="monthly">Monthly</option>
+            <option value="annual">Yearly</option>
+
+          </select>
+        </div>
+<!--
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        -->
+
+       <br>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+      </form>
+
+    </div>
+
+ </main1>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+
+
+<div class="my5"
+ style="width : 100%; margin-top:0px; padding:0%;
+  "
+>
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: rgb(61, 99, 143)"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4"
+             style="background-color:rgb(34, 58, 85)"
+             >
+      <!-- Left -->
+      <div class="me-5" style="width:700px">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/_capitalistbong" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-github"></a>
+
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">FinanceAid</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #777574; height: 2px"
+                />
+            <p>
+              One stop solution for all your financial calculations!!
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Created by</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #777574; height: 2px"
+                />
+            <p>
+              <a href="mailto:2020.shreya.kukreja@ves.ac.in" class="text-white">Shreya Kukreja</a>
+            </p>
+            <p>
+              <a href="mailto:2020.roshini.panjwani@ves.ac.in" class="text-white">Roshini Panjwani</a>
+            </p>
+            <p>
+              <a href="mailto:2020.priotosh.mondal@ves.ac.in" class="text-white">Priotosh Mondal</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Products</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #777574; height: 2px"
+                />
+            <p>
+              <a href="\SalaryCalculator" class="text-white">Inhand Salary Calculator</a>
+            </p>
+            <p>
+              <a href="\homeloan" class="text-white">Home Loan Calculator</a>
+            </p>
+            <p>
+              <a href="\eduloan" class="text-white">Education Loan Calculator</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #777574; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Mumbai, MH , India</p>
+            <p><i class="fas fa-envelope mr-3"></i> sophisticatedbratlxix@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> 9967460325</p>
+            <p><i class="fas fa-print mr-3"></i> 8450911390</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2022 Copyright:
+      <a class="text-white" href="#"
+         >FinanceAid.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
+</html>

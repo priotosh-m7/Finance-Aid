@@ -1,0 +1,19 @@
+
+.navbar{
+    background-color: black;
+    height: 200px;
+    width: 100%;
+}
+
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+}
+.navbar-brand{
+    width: 20%;
+}
+.navbar-toggle{
+    width: 20%;
+}
